@@ -1,0 +1,92 @@
+.calculadora-container {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 30px;
+  border-radius: 10px;
+  background-color: #f7f9fc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+}
+
+h2 {
+  color: #333;
+  margin-bottom: 25px;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h2 i {
+  margin-right: 10px;
+  color: #007bff;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  color: #555;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+label i {
+  margin-right: 5px;
+  color: #007bff;
+}
+
+input {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 16px;
+  display: block;
+}
+
+input:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.btn-calculate {
+  width: 100%;
+  padding: 12px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  margin-top: 20px;
+  transition: background-color 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-calculate i {
+  margin-right: 10px;
+}
+
+.btn-calculate:hover {
+  background-color: #0056b3;
+}
+
+.error-message {
+  color: #dc3545; 
+  font-size: 0.875em; 
+  margin-top: 0.25em; 
+}
+
+input.ng-invalid.ng-touched {
+  border-color: #dc3545; 
+}

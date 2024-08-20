@@ -1,0 +1,16 @@
+<div class="relatorio-container">
+  <h2><i class="fas fa-chart-line"> </i>  Relatório de Investimento</h2>
+
+  <div class="info">
+    <p><i class="fas fa-money-bill-wave"></i> <strong> Valor Investido:</strong> R$ {{ initialValue | number:'1.2-2' }}</p>
+    <p><i class="fas fa-calendar-alt"></i> <strong> Prazo:</strong> {{ months }} meses</p>
+  </div>
+
+  <div class="resultados">
+    <h3>Resultado</h3>
+    <p><strong>Resultado Bruto:</strong> R$ {{ grossValue | number:'1.2-2' }}</p>
+    <p><strong>Resultado Líquido:</strong> R$ {{ netValue | number:'1.2-2' }}</p>
+  </div>
+
+  <button (click)="voltar()" class="btn-back">Voltar</button>
+</div>

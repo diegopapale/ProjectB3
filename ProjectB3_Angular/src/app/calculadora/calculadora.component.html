@@ -1,0 +1,44 @@
+<div class="calculadora-container">
+  <h2><i class="fas fa-calculator"></i> Calculadora de Investimento</h2>
+  <form (ngSubmit)="calcularInvestimento(form)" #form="ngForm">
+    <div class="form-group">
+      <label for="initialValue"><i class="fas fa-dollar-sign"></i> Valor Monetário:</label>
+      <input
+        type="number"
+        id="valor"
+        [(ngModel)]="initialValue"
+        name="initialValue"
+        #initialValueInput="ngModel"
+        required
+        min="1"
+        placeholder="Ex: 1000"
+        class="form-control"
+      />
+      <div *ngIf="initialValueInput.invalid && (form.submitted || initialValueInput.dirty || initialValueInput.touched)" class="error-message">
+        <div *ngIf="initialValueInput.errors?.['required']">O valor é obrigatório.</div>
+        <div *ngIf="initialValueInput.errors?.['min']">O valor deve ser maior que 0.</div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="months"><i class="fas fa-clock"></i> Prazo (meses):</label>
+      <input
+        type="number"
+        id="prazo"
+        [(ngModel)]="months"
+        name="months"
+        #monthsInput="ngModel"
+        required
+        min="2"
+        placeholder="Ex: 12"
+        class="form-control"
+      />
+      <div *ngIf="monthsInput.invalid && (form.submitted || monthsInput.dirty || monthsInput.touched)" class="error-message">
+        <div *ngIf="monthsInput.errors?.['required']">O prazo é obrigatório.</div>
+        <div *ngIf="monthsInput.errors?.['min']">O prazo deve ser maior que 1 mês.</div>
+      </div>
+    </div>
+
+    <button type="submit" class="btn-calculate"><i class="fas fa-chart-line"></i> Calcular</button>
+  </form>
+</div>

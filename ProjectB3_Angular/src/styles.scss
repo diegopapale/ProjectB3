@@ -1,0 +1,24 @@
+/* You can add global styles to this file, and also import other style files */
+.toast-top-right {
+    top: 20px; /* distância do topo */
+    right: 20px; /* distância da borda direita */
+}
+
+.toast-error {
+    background-color: #f44336; /* cor de fundo para erros */
+    color: #fff; /* cor do texto */
+    border-radius: 4px; /* bordas arredondadas */
+}
+
+.toast-success {
+    background-color: #4caf50; /* cor de fundo para sucessos */
+    color: #fff; /* cor do texto */
+}
+
+.custom-toast {
+    background-color: #333; /* cor de fundo */
+    color: #fff; /* cor do texto */
+    border-radius: 4px; /* bordas arredondadas */
+    padding: 10px; /* espaçamento interno */
+    font-size: 14px; /* tamanho da fonte */
+  }
